@@ -1,5 +1,6 @@
 #include "Point3D.hpp"
 #include <cmath>
+#include <iostream>
 
 
 Point3D::Point3D(double x, double y, double z) :
@@ -14,3 +15,9 @@ double Point3D::distance(Point2D* other) {
 	}
 	return this->Point2D::distance(other);
 }
+
+void Point3D::displayCoordinates() {
+
+	std::cout << "Point3D{" << this->x << ';' << this->y << ';' << this->z << "}\n";
+}
+
