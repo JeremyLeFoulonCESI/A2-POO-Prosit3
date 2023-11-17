@@ -37,6 +37,7 @@ int main() {
     std::cout << parcours->distance() << '\n';
     std::cout << "parcours 3D\n";
 
+    delete parcours;
     delete p1;
     delete p2;
     delete p3;
