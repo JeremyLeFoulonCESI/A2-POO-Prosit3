@@ -51,6 +51,9 @@ int main() {
 	p1 = new CLpoint3D(0, 0, 0);
 	p2 = new CLpoint3D(1, 1, 1);
 	p3 = new CLpoint3D(2, 2, 2.2);
+
+	// NE PAS OUBLIER DE LIBERER LA MEMOIRE:
+	delete parcours;
 	parcours = new CLparcours3D(3);
 
 	parcours->ajouterPoint(p1);
@@ -64,12 +67,14 @@ int main() {
 	parcours->message();
 
 	// NE PAS OUBLIER DE LIBERER LA MEMOIRE:
+	delete parcours;
 	delete p1;
 	delete p2;
 	delete p3;
 
 	p1 = new CLpoint(0, 0);
 	p2 = new CLpoint3D(1, 1, 1);
+
 	// NE PAS OUBLIER DE LIBERER LA MEMOIRE:
 	delete p1;
 	(p1 = p2)->afficherCoordo();
