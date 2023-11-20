@@ -18,7 +18,6 @@ double Parcours3D::calculDistance() {
 		if (Point3D* p3d = dynamic_cast<Point3D*>(this->points[i])) {
 			if (Point3D* pt3d = dynamic_cast<Point3D*>(pt)) {
 				double dz = p3d->getZ() - pt3d->getZ();
-				std::cout << "Distance: " << std::sqrt(dx * dx + dy * dy + dz * dz) << '\n';
 				distance += std::sqrt(dx * dx + dy * dy + dz * dz);
 			}
 		} else

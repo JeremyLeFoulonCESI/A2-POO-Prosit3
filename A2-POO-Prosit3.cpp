@@ -44,6 +44,7 @@ int main() {
 	parcours->message();
 
 	// NE PAS OUBLIER DE LIBERER LA MEMOIRE:
+	delete parcours;
 	delete p1;
 	delete p2;
 	delete p3;
@@ -52,17 +53,12 @@ int main() {
 	p2 = new CLpoint3D(1, 1, 1);
 	p3 = new CLpoint3D(2, 2, 2.2);
 
-	// NE PAS OUBLIER DE LIBERER LA MEMOIRE:
-	delete parcours;
 	parcours = new CLparcours3D(3);
 
 	parcours->ajouterPoint(p1);
 	parcours->ajouterPoint(p2);
 	parcours->ajouterPoint(p3);
 
-	/*
-	Ici, 
-	*/
 	std::cout << parcours->calculDistance() << ENDL;
 	parcours->message();
 
